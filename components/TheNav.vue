@@ -1,9 +1,9 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark padding">
-    <a
+    <NuxtLink
       class="navbar-brand"
       to="/"
-    >Firengii</a>
+    >Firengii</NuxtLink>
     <button
       class="navbar-toggler"
       type="button"
@@ -21,16 +21,16 @@
     >
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a
+          <NuxtLink
             to="/products"
             class="nav-link"
-          >Products <span class="sr-only">(current)</span></a>
+          >Products <span class="sr-only">(current)</span></NuxtLInk>
         </li>
         <li class="nav-item active">
-          <a
+          <NuxtLink
             to="/my-items"
             class="nav-link"
-          >My Items <span class="sr-only">(current)</span></a>
+          >My Items <span class="sr-only">(current)</span></NuxtLink>
         </li>
       </ul>
     </div>
