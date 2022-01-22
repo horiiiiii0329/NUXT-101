@@ -1,20 +1,30 @@
 <template>
-  <div class="container">
-    <TheHero />
-    <LargeCardDisplay
-      v-for="cardInfo in largeCardInfo"
-      :key="cardInfo.id"
-      :cardsSection="cardInfo"
-    />
+  <div>
+    <TheNav />
+    <div class="container">
+      <TheHero />
+      <LargeCardDisplay
+        v-for="cardInfo in largeCardInfo"
+        :key="cardInfo.id"
+        :cardsSection="cardInfo"
+      />
+      <SmallCardDisplay
+        v-for="cardInfo in smallCardSections"
+        :key="cardInfo.id"
+        :cardsSection="cardInfo"
+      />
+    </div>
   </div>
 </template>
 
 <script>
-import { largeCardSections } from "@/assets/svg/data.js";
+import { largeCardSections, smallCardSections } from "~/assets/data.js";
+
 export default {
   data() {
     return {
       largeCardInfo: largeCardSections,
+      smallCardSections,
     };
   },
 };

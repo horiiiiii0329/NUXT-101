@@ -4,8 +4,13 @@
     <p class="snippet">
       {{ cardsSection.snippet }}
     </p>
-    <div class="cards-container" />
-    <LargeCard v-for="card in cardsSection.cards" :key="card.id" :card="card" />
+    <div class="cards-container">
+      <LargeCard
+        v-for="card in cardsSection.cards"
+        :key="card.id"
+        :card="card"
+      />
+    </div>
   </div>
 </template>
 <script>
@@ -28,5 +33,26 @@ export default {
 .cards-container {
   display: flex;
   justify-content: space-between;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
 </style>
