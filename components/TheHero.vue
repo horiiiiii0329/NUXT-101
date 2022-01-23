@@ -6,7 +6,7 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste iusto
         illum quidem asperiores, cum nisi aperiam eius ipsa sapiente odit!
       </p>
-      <button class="button btn">Start Looking</button>
+      <button class="button btn">{{data1}}</button>
     </div>
     <img
       class="image"
@@ -17,7 +17,12 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+export default {
+  computed: {
+    ...mapState(["data1", "data3"]),
+  },
+};
 </script>
 
 <style scoped>
